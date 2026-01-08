@@ -21,7 +21,7 @@ jobs:
         run: |
           git config --global user.name 'github-actions'
           git config --global user.email 'github-actions@github.com'
-          git add style.min.css
+          git add modern-reset.min.css
           git commit -m "Auto-minify CSS" || echo "No changes to commit"
           git push
 

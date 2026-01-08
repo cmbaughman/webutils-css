@@ -1,0 +1,33 @@
+name: Build and Purge CDN
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install & Minify
+        run: |
+          npm install
+          npm run build
+
+      - name: Commit Minified File
+        run: |
+          git config --global user.name 'github-actions'
+          git config --global user.email 'github-actions@github.com'
+          git add style.min.css
+          git commit -m "Auto-minify CSS" || echo "No changes to commit"
+          git push
+
+      - name: Purge jsDelivr Cache
+        uses: gacts/purge-jsdelivr-cache@v1
+        with:
+          url: |
+            https://cdn.jsdelivr.net/gh/${{ github.repository }}@main/style.css
+            https://cdn.jsdelivr.net/gh/${{ github.repository }}@main/style.min.css

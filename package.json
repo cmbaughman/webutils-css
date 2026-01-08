@@ -1,0 +1,24 @@
+{
+  "name": "webutils-css",
+  "version": "1.0.0",
+  "description": "Shared CSS",
+  "main": "index.js",
+  "scripts": {
+    "build": "lightningcss --minify --bundle --targets '>= 0.25%' modern-reset.css -o modern-reset.min.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cmbaughman/webutils-css.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/cmbaughman/webutils-css/issues"
+  },
+  "homepage": "https://github.com/cmbaughman/webutils-css#readme",
+  "devDependencies": {
+    "lightningcss-cli": "^1.30.2"
+  }
+}

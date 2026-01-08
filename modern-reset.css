@@ -11,8 +11,6 @@
 
 /* 2. Prevent font size inflation on mobile */
 html {
-  -moz-text-size-adjust: none;
-  -webkit-text-size-adjust: none;
   text-size-adjust: none;
 }
 
@@ -45,6 +43,7 @@ button, input, label, select, textarea {
 h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
 }
+
 p {
   text-wrap: pretty;
 }
@@ -75,17 +74,12 @@ ul[role="list"], ol[role="list"] {
 /* 12. Links: Skip ink on underlines */
 a:not([class]) {
   text-decoration-skip-ink: auto;
-  color: currentColor;
+  color: currentcolor;
 }
 
 /* 13. Anchored elements: Extra scroll margin */
 :target {
   scroll-margin-block: 5ex;
-}
-
-/* 14. Isolation for root (e.g., React/Vue apps) */
-#root, #__next {
-  isolation: isolate;
 }
 
 /* 15. Overflow wrapping for long words */

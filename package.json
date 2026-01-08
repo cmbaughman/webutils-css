@@ -4,7 +4,8 @@
   "description": "Shared CSS",
   "main": "index.js",
   "scripts": {
-    "build": "lightningcss --minify --bundle --targets '>= 0.25%' modern-reset.css -o modern-reset.min.css"
+    "build": "lightningcss --minify --bundle --targets '>= 0.25%' modern-reset.css -o modern-reset.min.css",
+    "prepare": "husky"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,7 @@
   },
   "homepage": "https://github.com/cmbaughman/webutils-css#readme",
   "devDependencies": {
+    "husky": "^9.1.7",
     "lightningcss-cli": "^1.30.2"
   }
 }

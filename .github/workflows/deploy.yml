@@ -22,7 +22,8 @@ jobs:
           git config --global user.name 'github-actions'
           git config --global user.email 'github-actions@github.com'
           git add modern-reset.min.css
-          git commit -m "Auto-minify CSS" || echo "No changes to commit"
+          # Adding [skip ci] prevents this commit from triggering the action again
+          git commit -m "Auto-minify CSS [skip ci]" || echo "No changes to commit"
           git push
 
       - name: Purge jsDelivr Cache

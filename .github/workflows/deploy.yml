@@ -29,5 +29,5 @@ jobs:
         uses: gacts/purge-jsdelivr-cache@v1
         with:
           url: |
-            https://cdn.jsdelivr.net/gh/${{ github.repository }}@main/style.css
-            https://cdn.jsdelivr.net/gh/${{ github.repository }}@main/style.min.css
+            https://cdn.jsdelivr.net/gh/${{ github.repository }}@main/modern-reset.css
+            https://cdn.jsdelivr.net/gh/${{ github.repository }}@main/modern-reset.min.css

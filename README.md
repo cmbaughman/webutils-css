@@ -16,7 +16,7 @@ npm run build
 
 To just use the reset, put this in your HTML:
 ```
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/cmbaughman/webutils-css@main/style.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/cmbaughman/webutils-css@main/modern-reset.min.css">
 ```
 
 ## Misc
